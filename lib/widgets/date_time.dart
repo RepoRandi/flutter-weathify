@@ -27,9 +27,9 @@ class _DateTimeWidgetState extends State<DateTimeWidget> {
 
   String _getCurrentDateTime() {
     DateTime now = DateTime.now();
-    String formattedDate = DateFormat('EEEE, dd MMMM yyyy').format(now);
+    String formattedDate = DateFormat('EEEE dd MMMM •').format(now);
     String formattedTime = DateFormat('HH:mm:ss').format(now);
-    return '$formattedDate | $formattedTime';
+    return '$formattedDate $formattedTime';
   }
 
   @override
@@ -37,7 +37,7 @@ class _DateTimeWidgetState extends State<DateTimeWidget> {
     return Text(
       _currentDateTime,
       style: const TextStyle(
-          color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+          color: Colors.white, fontSize: 16, fontWeight: FontWeight.w300),
     );
   }
 }
